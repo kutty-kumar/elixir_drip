@@ -1,0 +1,31 @@
+digraph "xref graph" {
+  "lib/elixir_drip_web.ex"
+  "lib/elixir_drip_web/application.ex"
+  "lib/elixir_drip_web/application.ex" -> "lib/elixir_drip_web/endpoint.ex"
+  "lib/elixir_drip_web/endpoint.ex" -> "lib/elixir_drip_web.ex" [label="(compile)"]
+  "lib/elixir_drip_web/endpoint.ex" -> "lib/elixir_drip_web/router.ex"
+  "lib/elixir_drip_web/router.ex" -> "lib/elixir_drip_web.ex" [label="(compile)"]
+  "lib/elixir_drip_web/router.ex" -> "lib/elixir_drip_web/controllers/page_controller.ex"
+  "lib/elixir_drip_web/controllers/page_controller.ex" -> "lib/elixir_drip_web.ex" [label="(compile)"]
+  "lib/elixir_drip_web/controllers/page_controller.ex" -> "lib/elixir_drip_web/gettext.ex" [label="(compile)"]
+  "lib/elixir_drip_web/channels/user_socket.ex"
+  "lib/elixir_drip_web/controllers/page_controller.ex"
+  "lib/elixir_drip_web/endpoint.ex"
+  "lib/elixir_drip_web/gettext.ex"
+  "lib/elixir_drip_web/router.ex"
+  "lib/elixir_drip_web/views/error_helpers.ex"
+  "lib/elixir_drip_web/views/error_helpers.ex" -> "lib/elixir_drip_web/gettext.ex"
+  "lib/elixir_drip_web/views/error_view.ex"
+  "lib/elixir_drip_web/views/error_view.ex" -> "lib/elixir_drip_web.ex" [label="(compile)"]
+  "lib/elixir_drip_web/views/error_view.ex" -> "lib/elixir_drip_web/gettext.ex" [label="(compile)"]
+  "lib/elixir_drip_web/views/error_view.ex" -> "lib/elixir_drip_web/views/error_helpers.ex" [label="(compile)"]
+  "lib/elixir_drip_web/views/layout_view.ex"
+  "lib/elixir_drip_web/views/layout_view.ex" -> "lib/elixir_drip_web.ex" [label="(compile)"]
+  "lib/elixir_drip_web/views/layout_view.ex" -> "lib/elixir_drip_web/gettext.ex" [label="(compile)"]
+  "lib/elixir_drip_web/views/layout_view.ex" -> "lib/elixir_drip_web/router.ex"
+  "lib/elixir_drip_web/views/layout_view.ex" -> "lib/elixir_drip_web/views/error_helpers.ex" [label="(compile)"]
+  "lib/elixir_drip_web/views/page_view.ex"
+  "lib/elixir_drip_web/views/page_view.ex" -> "lib/elixir_drip_web.ex" [label="(compile)"]
+  "lib/elixir_drip_web/views/page_view.ex" -> "lib/elixir_drip_web/gettext.ex" [label="(compile)"]
+  "lib/elixir_drip_web/views/page_view.ex" -> "lib/elixir_drip_web/views/error_helpers.ex" [label="(compile)"]
+}

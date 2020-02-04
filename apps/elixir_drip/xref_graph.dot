@@ -1,0 +1,6 @@
+digraph "xref graph" {
+  "lib/elixir_drip.ex"
+  "lib/elixir_drip/application.ex"
+  "lib/elixir_drip/application.ex" -> "lib/elixir_drip/repo.ex"
+  "lib/elixir_drip/repo.ex"
+}

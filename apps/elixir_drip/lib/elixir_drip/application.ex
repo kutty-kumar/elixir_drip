@@ -6,10 +6,14 @@ defmodule ElixirDrip.Application do
   use Application
 
   def start(_type, _args) do
-    children = [
-      ElixirDrip.Repo
-    ]
-
-    Supervisor.start_link(children, strategy: :one_for_one, name: ElixirDrip.Supervisor)
+    import Supervisor.Spec, warn: false
+    Supervisor.start_link(
+          [
+            supervisor(ElixirDrip.Repo, []),
+            supervisor(ElixirDrip.Storage.Supervisors.CacheSupervisor, [], name: CacheSupervisor)
+          ],
+          strategy: :one_for_one,
+          name: ElixirDrip.Supervisor
+          )
   end
 end

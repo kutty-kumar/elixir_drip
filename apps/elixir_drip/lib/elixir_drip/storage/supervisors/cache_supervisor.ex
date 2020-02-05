@@ -3,7 +3,7 @@ defmodule ElixirDrip.Storage.Supervisors.CacheSupervisor do
   alias ElixirDrip.Storage.Workers.CacheWorker
 
   def start_link() do
-    DynamicSupervisor.start_link(__MODULE, [], name: __MODULE__)
+    DynamicSupervisor.start_link(__MODULE__, [], name: __MODULE__)
   end
 
   def init(_) do
@@ -42,7 +42,7 @@ end
  defp cache_worker_spec(id, content) do
    Supervisor.child_spec(
      CacheWorker,
-     start: {CacheWorker, :start_link, [id, content]}
+     start: {CacheWorker, :start_link, [id, content]},
      restart: :transient
      )
  end
